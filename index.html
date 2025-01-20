@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body id="key-expertise">
+    <nav>
+      <div id="circle" class="color-circle">{ }</div>
+      <div id="deco">
+        <div id="deco-cyan" class="nav-deco color-box bg-cyan"></div>
+        <div id="deco-orange" class="nav-deco color-box bg-orange"></div>
+        <div id="deco-magenta" class="nav-deco color-box bg-magenta"></div>
+        <div id="deco-green" class="nav-deco color-box bg-green"></div>
+      </div>
+      <div class="list">
+        <ul>
+          <li class="pc"><a href="">Home</a></li>
+          <li id="ke-title" class="pc">
+            <a href="#key-expertise">Key Expertise</a>
+          </li>
+          <li id="pp-title" class="pc">
+            <a href="#past-projects">Past Projects</a>
+          </li>
+          <div class="mobile-container">
+            <div onclick="toggleMenu()">
+              <li id="mobile-list" class="mobile active"></li>
+              <li class="mobile">&darr;</li>
+            </div>
+
+            <li>
+              <div id="mobile-option" class="mobile-option-list disabled"></div>
+            </li>
+            <li>
+              <div id="mobile-option-box" class="mobile-option-list disabled">
+                <div></div>
+                <br />
+              </div>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    <div onclick="removeMenu()">
+      <br />
+      <br /><br /><br />
+      <div class="past-projects">
+        <span>Key Expertise</span>
+        <span class="vertical-text-title">Key Expertise</span>
+        <span class="vertical-text-title" style="left: 60%; top: 2vw"
+          >Key Expertise</span
+        >
+        <span class="vertical-text-title" style="left: 30%; top: 2vw"
+          >Key Expertise</span
+        >
+        <div class="black-background"></div>
+      </div>
+      <br />
+      <br />
+      <div id="skill" class="skill-container">
+        <div class="skill-card">
+          <span class="vertical-text">PHP</span>
+          <div>
+            <div class="skill-image">
+              <img src="assets/icon/php.png" alt="" srcset="" />
+            </div>
+            <div class="skill-text">
+              <p>
+                Knowledge in PHP using <span class="magenta">Pure PHP</span>. I
+                also have experience in
+                <span class="magenta">making API</span> and
+                <span class="magenta">Object-Oriented PHP</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="vertical-text">JavaScript</span>
+          <div>
+            <div class="skill-image">
+              <img src="assets/icon/javascript.png" alt="" srcset="" />
+            </div>
+            <div class="skill-text">
+              <p>
+                Experienced in <span class="orange">VanillaJS</span>. Especially
+                in managing <span class="orange">DOM</span>. I also have
+                experience calling API using <span class="orange">XHR</span> and
+                <span class="orange">fetch</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="vertical-text">MySQL</span>
+          <div>
+            <div class="skill-image">
+              <img src="assets/icon/MySQL-Logo.png" alt="" srcset="" />
+            </div>
+            <div class="skill-text">
+              <p>
+                Knowledge in <span class="orange">DBMS</span>. Using
+                <span class="orange">MySQL</span> and
+                <span class="orange">phpMyAdmin</span> as the dashboard.
+                Understood <span class="orange">CRUD</span> query
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="vertical-text">HTML</span>
+          <div>
+            <div class="skill-image">
+              <img src="assets/icon/html.png" alt="" srcset="" />
+            </div>
+            <div class="skill-text">
+              <p>Essential knowledge of <span class="orange">HTML</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="vertical-text">CSS</span>
+          <div>
+            <div class="skill-image">
+              <img src="assets/icon/css-logo.png" alt="" srcset="" />
+            </div>
+            <div class="skill-text">
+              <p>
+                Essential knowledge of <span class="cyan">CSS</span>. Proven by
+                the website you're currently browsing!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <span class="vertical-text">MISC.</span>
+          <div>
+            <div class="skill-image">
+              <img src="assets/icon/misc.png" alt="" srcset="" />
+            </div>
+            <!-- id ini agar klik scroll berjalan -->
+            <div id="past-projects" class="skill-text">
+              <p>
+                Toefl Score <span class="green">561</span> <br />
+                Photo/Video Editing <br />
+                Computer Networking
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="current-learn">
+        <div class="grey-background">
+          <div id="learning-text">Currently Learning :</div>
+          <div id="skill-image-container">
+            <img class="learning" src="assets/icon/laravel.png" alt="" />
+            <img class="learning" src="assets/icon/git.png" alt="" />
+            <img class="learning" src="assets/icon/React.webp" alt="" />
+            <img class="learning" src="assets/icon/bootstrap.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="past-projects">
+        <span>PAST PROJECTS</span>
+        <span class="vertical-text-title">PAST PROJECTS</span>
+        <span class="vertical-text-title" style="left: 60%; top: 2vw"
+          >PAST PROJECTS</span
+        >
+        <span class="vertical-text-title" style="left: 30%; top: 2vw"
+          >PAST PROJECTS</span
+        >
+        <div class="black-background"></div>
+      </div>
+      <br />
+      <br />
+      <div class="projects-container">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/icon/cssweb.png" alt="" srcset="" />
+          </div>
+          <div class="project-title">CSS & DOM Playground</div>
+          <div class="project-description">
+            Website ini dibuat untuk melatih kemampuan
+            <span class="magenta">DOM</span> dan
+            <span class="magenta">CSS</span> saya. Tema website ini adalah
+            Vaporwave atau Synthwave.
+          </div>
+          <div class="project-button">
+            <a href="http://www.cssrafli.thsite.top"
+              ><div class="new-button">Visit Site</div></a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/icon/akuchat.png" alt="" srcset="" />
+          </div>
+          <div class="project-title">Live Chat Web Application</div>
+          <div class="project-description">
+            Menggunakan <span class="orange">VanillaJS</span> dan
+            <span class="orange">Object-Oriented PHP</span>. Website ini
+            menggunakan <span class="orange">XHR</span> untuk call API-nya.
+            Tutorial penuh dibuat oleh YouTuber.
+          </div>
+          <div class="project-button">
+            <a href="http://www.akuchat.thsite.top"
+              ><div class="new-button">Visit Site</div></a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/icon/spk.png" alt="" srcset="" />
+          </div>
+          <div class="project-title">Sistem Penunjang Keputusan</div>
+          <div class="project-description">
+            Website SPK yang juga merupakan Project Skripsi saya. Menggunakan
+            bahasa <span class="cyan">PHP</span> dan juga framework
+            <span class="cyan">Bootstrap</span>
+          </div>
+          <div class="project-button">
+            <a href="http://www.spkrafli.thsite.top"
+              ><div class="new-button">Visit Site</div></a
+            >
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
