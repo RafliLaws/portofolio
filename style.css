@@ -333,6 +333,7 @@ p {
 
 .projects-container {
   margin: 0 auto;
+
   column-count: 3;
   column-width: 300px;
   width: 70%;
@@ -472,6 +473,12 @@ p {
   }
   .color-circle {
     margin-top: 12px;
+  }
+  .projects-container {
+    margin-left: 30px;
+  }
+  .skill-container {
+    margin-left: 30px;
   }
 }
 
