@@ -46,6 +46,7 @@ nav ul li {
 #mobile-list {
   text-align: end;
   margin-right: 0;
+  font-size: calc(1vw + 10px);
 }
 
 #mobile-option {
