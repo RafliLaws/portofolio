@@ -71,37 +71,65 @@ function scrollFunction() {
 
   if (width > 800) {
     if (
+      document.documentElement.scrollTop >= 1900 ||
+      document.body.scrollTop >= 1900
+    ) {
+      let pp = _("pp-title");
+      pp.classList.add("active");
+      let ke = _("ke-title");
+      ke.classList.remove("active");
+      let bio = _("bio-title");
+      bio.classList.remove("active");
+      console.log("halo");
+    } else if (
       document.documentElement.scrollTop >= 700 ||
       document.body.scrollTop >= 700
     ) {
       let pp = _("pp-title");
-      pp.classList.add("active");
+      pp.classList.remove("active");
       let ke = _("ke-title");
-      ke.classList.remove("active");
-      console.log("halo");
+      ke.classList.add("active");
+      let bio = _("bio-title");
+      bio.classList.remove("active");
+      console.log("hapus");
     } else {
       let pp = _("pp-title");
       pp.classList.remove("active");
       let ke = _("ke-title");
-      ke.classList.add("active");
-      console.log("hapus");
+      ke.classList.remove("active");
+      let bio = _("bio-title");
+      bio.classList.add("active");
     }
   } else {
     if (
-      document.documentElement.scrollTop >= 2200 ||
-      document.body.scrollTop >= 2200
+      document.documentElement.scrollTop >= 3800 ||
+      document.body.scrollTop >= 3800
     ) {
       let pp = _("pp-title");
       pp.classList.add("active");
       let ke = _("ke-title");
       ke.classList.remove("active");
+      let bio = _("bio-title");
+      bio.classList.remove("active");
       console.log("halo");
-    } else {
+    } else if (
+      document.documentElement.scrollTop >= 1200 ||
+      document.body.scrollTop >= 1200
+    ) {
       let pp = _("pp-title");
       pp.classList.remove("active");
       let ke = _("ke-title");
       ke.classList.add("active");
+      let bio = _("bio-title");
+      bio.classList.remove("active");
       console.log("hapus");
+    } else {
+      let pp = _("pp-title");
+      pp.classList.remove("active");
+      let ke = _("ke-title");
+      ke.classList.remove("active");
+      let bio = _("bio-title");
+      bio.classList.add("active");
     }
     console.log("its mobile!!");
     let activeList = document.querySelector(".active a");
