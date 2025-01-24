@@ -269,6 +269,7 @@ p {
 .line-picture {
   position: absolute;
 }
+
 .bio-container {
   padding-top: 0px;
   position: relative;
@@ -280,7 +281,6 @@ p {
   width: 100%;
   background-color: black;
   height: 60px;
-  font-size: 25px;
   border-radius: 30px;
   font-weight: bold;
   align-self: center;
@@ -290,9 +290,7 @@ p {
 
 .bio-content {
   display: block;
-  margin-top: 400px;
   background-color: black;
-
   min-height: 300px;
   padding: 10px;
   border-radius: 20px;
@@ -313,7 +311,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 1000;
   font-style: italic;
-  font-size: 20px;
+  font-size: calc(0.8vw + 10px);
   cursor: pointer;
 }
 
@@ -785,4 +783,33 @@ p {
 
 .line-picture {
   overflow: hidden;
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 400px;
+}
+
+footer p {
+  font-size: 50px;
+}
+
+#sosmed {
+  display: block;
+}
+
+#sosmed img {
+  cursor: pointer;
+  width: 50px;
+  height: auto;
+  margin: 10px;
+}
+
+#sosmed img:hover {
+  border: 5px solid white;
 }

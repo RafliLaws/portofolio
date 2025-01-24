@@ -164,6 +164,31 @@ for (let i = 0; i < 1000; i++) {
   waktuHapus += waktu;
 }
 
+//Biography selector
+const bioText = _("bio-content");
+const bioSelect = document.querySelectorAll(".bio-select");
+bioSelect.forEach((element) => {
+  element.addEventListener("click", function () {
+    switch (element.id) {
+      case "about-me":
+        bioText.innerHTML =
+          "A full-of-curiosity 23 years old boy that lives in South Jakarta.Some say a weird and funky boy, and some a cold and calm boy. Have hobbies around exercising especially Calisthenics and sometimes spend my times just playing games. Needless to say, thank you forchecking out my portofolio website! I've put every knowledge I know about Vanilla HTML and CSS to build this.";
+        break;
+      case "education":
+        bioText.innerHTML =
+          "<ul><li style='font-weight: bolder; margin-top: 30px'>Universitas Pamulang (<span class='cyan'>2020</span> -<span class='orange'>OnGoing</span>)</li>Teknik Informatika<li style='font-weight: bolder; margin-top: 30px'>SMKN 43 Jakarta (<span class='cyan'>2016 - 2019</span>)</li>Teknik Komputer Jaringan</ul>";
+        break;
+      case "experiences":
+        bioText.innerHTML =
+          "<ul><li style='font-weight: bolder; margin-top: 30px'>PT. Aksara Nusantara Ynovasi <br />(<span class='cyan'>3</span> Years <span class='orange'>11</span> Months)</li>Technical Support Engineer<li style='font-weight: bolder; margin-top: 30px'>PPPA Daarul Qur'an (<span class='orange'>6</span> Months)</li>IT Support Intern.</ul>";
+        break;
+      default:
+        bioText.innerHTML = "About me";
+        break;
+    }
+  });
+});
+
 // Failed attempt of Disco Words :(
 // let container = document.querySelectorAll(".skill-card");
 // let trigger = 0;
