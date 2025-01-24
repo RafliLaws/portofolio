@@ -18,27 +18,45 @@ pcList.forEach((element) => {
 
 let deco = _("deco");
 let circle = _("circle");
-
+let nama = _("intro-name");
+let sunFade = document.querySelector(".sunFade");
+let bioSunFade = document.querySelector(".bio-sunFade");
 deco.addEventListener("click", function (e) {
   switch (e.target.id) {
     case "deco-cyan":
       circle.style.backgroundImage =
         "linear-gradient(to bottom, cyan, rgb(77, 64, 252))";
+      sunFade.style.backgroundImage =
+        "linear-gradient(to bottom, cyan, rgb(77, 64, 252))";
+      bioSunFade.style.backgroundImage =
+        "linear-gradient(to top, rgb(247, 0, 255), cyan)";
       circle.style.color = "blue";
       break;
     case "deco-magenta":
       circle.style.backgroundImage =
         "linear-gradient(to bottom, rgb(65, 17, 141), rgb(77, 64, 252))";
+      sunFade.style.backgroundImage =
+        "linear-gradient(to bottom, rgb(65, 17, 141), rgb(77, 64, 252))";
+      bioSunFade.style.backgroundImage =
+        "linear-gradient(to top, rgb(247, 0, 255), rgb(65, 17, 141))";
       circle.style.color = "purple";
       break;
     case "deco-orange":
       circle.style.backgroundImage =
-        "linear-gradient(to bottom,rgb(255, 123, 0),rgb(255, 166, 0))";
+        "linear-gradient(to top,rgb(255, 123, 0),rgb(255, 238, 0))";
+      sunFade.style.backgroundImage =
+        "linear-gradient(to top,rgb(255, 123, 0),rgb(255, 238, 0))";
+      bioSunFade.style.backgroundImage =
+        "linear-gradient(to top, rgb(247, 0, 255), rgb(255, 123, 0))";
       circle.style.color = "rgb(160,32,0)";
       break;
     case "deco-green":
       circle.style.backgroundImage =
         "linear-gradient(to bottom,rgb(144, 214, 15),rgb(0, 255, 55))";
+      sunFade.style.backgroundImage =
+        "linear-gradient(to bottom,rgb(144, 214, 15),rgb(0, 255, 55))";
+      bioSunFade.style.backgroundImage =
+        "linear-gradient(to top, rgb(247, 0, 255), rgb(144, 214, 15))";
       circle.style.color = "green";
       break;
   }
@@ -110,6 +128,40 @@ function removeMenu() {
   mobileMenu.forEach((element) => {
     element.classList.add("disabled");
   });
+}
+
+// Sun Animation
+const sun = document.querySelector(".sun");
+const bioSun = document.querySelector(".bio-sun");
+
+let waktu = 1000;
+let waktuHapus = 7000;
+let temout = waktu;
+for (let i = 0; i < 1000; i++) {
+  setTimeout(() => {
+    const newDiv = document.createElement("div");
+    const isi = document.createTextNode(" ");
+    newDiv.appendChild(isi);
+    newDiv.classList.add("line");
+    newDiv.setAttribute("id", "line-" + i);
+    sun.appendChild(newDiv);
+  }, temout);
+  setTimeout(() => {
+    const newDiv = document.createElement("div");
+    const isi = document.createTextNode(" ");
+    newDiv.appendChild(isi);
+    newDiv.classList.add("bio-line");
+    newDiv.setAttribute("id", "line-" + i);
+    bioSun.appendChild(newDiv);
+  }, temout);
+  temout += waktu;
+  setTimeout(() => {
+    const lineHapus = document.querySelectorAll(`#line-${i}`);
+    lineHapus.forEach((element) => {
+      element.remove();
+    });
+  }, waktuHapus);
+  waktuHapus += waktu;
 }
 
 // Failed attempt of Disco Words :(

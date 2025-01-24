@@ -1,5 +1,7 @@
 html {
   scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 body {
   background-color: rgb(27, 27, 27);
@@ -39,6 +41,10 @@ nav ul li {
   background-image: linear-gradient(to bottom, cyan, rgb(77, 64, 252));
 }
 
+.list ul {
+  padding-left: 0px;
+}
+
 .mobile-list {
   display: none;
 }
@@ -46,7 +52,7 @@ nav ul li {
 #mobile-list {
   text-align: end;
   margin-right: 0;
-  font-size: calc(1vw + 10px);
+  font-size: 18px;
 }
 
 #mobile-option {
@@ -58,7 +64,7 @@ nav ul li {
   border-radius: 0px 10px 0px 10px;
   transform: rotate(45deg);
   position: absolute;
-  left: 50px;
+  left: 30px;
   top: 30px;
 }
 
@@ -73,7 +79,7 @@ nav ul li {
   height: fit-content;
   background-color: rgb(58, 58, 58);
   position: absolute;
-  left: -35px;
+  left: -55px;
   top: 37px;
 }
 
@@ -150,6 +156,174 @@ p {
   align-items: center;
   font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.intro-container {
+  background-image: url("assets/image/background.png");
+  background-size: cover;
+  color: white;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.introduction {
+  padding-top: 100px;
+  margin: auto;
+  width: 100%;
+  column-count: 2;
+  column-width: 250px;
+}
+
+.introduction div {
+  margin: 0 auto;
+  display: flex;
+}
+
+.intro-image {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(2vw + 30px);
+  height: 30vh;
+}
+
+.intro-image img {
+  height: auto;
+  width: calc(20vw + 200px);
+}
+
+.intro-name {
+  margin: auto;
+  padding-top: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(2vw + 30px);
+  width: auto;
+  height: 30vh;
+  font-weight: bold;
+}
+
+#intro-name {
+  background-image: linear-gradient(
+    to left,
+    rgb(109, 109, 109),
+    rgb(255, 255, 255)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#role {
+  font-weight: lighter;
+  font-size: calc(2vw + 15px);
+  color: gold;
+}
+
+.biography-container {
+  background-color: rgb(39, 39, 39);
+  width: 85%;
+  height: fit-content;
+  margin: auto;
+  border-radius: 30px;
+  filter: drop-shadow(9px 9px black);
+  border: 7px solid black;
+}
+
+.biography {
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;
+  width: 90%;
+  column-count: 2;
+  column-width: 250px;
+}
+
+.biography div {
+  margin: 0 auto;
+  display: flex;
+}
+
+.bio-image {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(2vw + 30px);
+  height: fit-content;
+  background-color: black;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 30px;
+  z-index: 2;
+}
+
+.bio-image img {
+  height: auto;
+  width: calc(10vw + 200px);
+  z-index: 3;
+}
+
+.line-picture {
+  position: absolute;
+}
+.bio-container {
+  padding-top: 0px;
+  position: relative;
+  display: block !important;
+}
+.bio-button {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: black;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  align-self: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.bio-content {
+  display: block;
+  margin-top: 400px;
+  background-color: black;
+
+  min-height: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  overflow-y: auto;
+}
+
+.bio-button div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 1000;
+  font-style: italic;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.bio-button div:hover {
+  background-color: yellow;
+  color: black;
+}
+.bio-button div:active {
+  background-color: rgb(102, 255, 0);
+  color: black;
 }
 
 .skill-container {
@@ -487,4 +661,128 @@ p {
   .mobile {
     display: none;
   }
+}
+
+/* sun experiment */
+
+.sun {
+  border-radius: 50%;
+  background-image: linear-gradient(to top, rgb(4, 0, 255), rgb(0, 247, 255));
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sunFade {
+  border-radius: 50%;
+  background-image: linear-gradient(to top, rgb(255, 94, 0), yellow);
+  width: calc(4vw + 100px);
+  height: calc(4vw + 100px);
+  display: block;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.sunFade:hover {
+  opacity: 0.2;
+}
+
+.line {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  animation-name: lineUp;
+  animation-duration: 5s;
+  bottom: 300px;
+  opacity: 0;
+  animation-timing-function: linear;
+}
+
+.line-bio {
+  position: absolute;
+  background-color: rgb(255, 136, 0);
+  width: 100%;
+  animation-name: lineUp;
+  animation-duration: 5s;
+  bottom: 300px;
+  opacity: 0;
+  animation-timing-function: linear;
+}
+
+.sunParent {
+  border-radius: 50%;
+  width: fit-content;
+  overflow: hidden;
+  position: absolute;
+  left: -30px;
+  top: -40px;
+  z-index: 3;
+}
+
+@keyframes lineUp {
+  0% {
+    bottom: 50%;
+    opacity: 0;
+    height: 0vw;
+  }
+  25% {
+    bottom: 40%;
+    opacity: 1;
+    height: calc(0.5vw + 5px);
+  }
+  90% {
+    bottom: 0px;
+    opacity: 1;
+    height: calc(0.5vw + 10px);
+  }
+  100% {
+    bottom: 0px;
+    opacity: 1;
+    height: 0px;
+  }
+}
+
+.bio-sun {
+  background-image: linear-gradient(to top, rgb(4, 0, 255), rgb(0, 247, 255));
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.bio-sunFade {
+  background-image: linear-gradient(to top, rgb(247, 0, 255), yellow);
+  width: calc(12vw + 150px);
+  height: calc(12vw + 150px);
+  display: block;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.bio-sunFade:hover {
+  opacity: 0.2;
+}
+
+.bio-line {
+  position: absolute;
+  background-color: rgb(73, 5, 62);
+  width: 100%;
+  animation-name: lineUp;
+  animation-duration: 5s;
+  bottom: 300px;
+  opacity: 0;
+  animation-timing-function: linear;
+}
+
+.sunParent {
+  border-radius: 50%;
+  width: fit-content;
+  overflow: hidden;
+  position: absolute;
+  left: -30px;
+  top: -40px;
+  z-index: 0;
+}
+
+.line-picture {
+  overflow: hidden;
 }
