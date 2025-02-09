@@ -718,6 +718,9 @@ p {
   .skill-container {
     margin-left: 30px;
   }
+  .others-container {
+    margin-left: 30px;
+  }
 }
 
 @media only screen and (min-width: 800px) {
