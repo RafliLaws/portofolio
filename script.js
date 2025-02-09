@@ -68,7 +68,6 @@ window.onscroll = function () {
 
 function scrollFunction() {
   let width = window.innerWidth > 0 ? window.innerWidth : screen.width;
-
   if (width > 800) {
     if (
       document.documentElement.scrollTop >= 1900 ||
@@ -264,3 +263,29 @@ bioSelect.forEach((element) => {
 //     vWaktu = 0;
 //   });
 // });
+
+const leetcode = async function leetcode() {
+  fetch("https://alfa-leetcode-api.onrender.com/LaurenceThriving/solved")
+    .then((result) => result.json())
+    .then((hasil) => {
+      let easy = _("leet-easy");
+      let medium = _("leet-medium");
+      let hard = _("leet-hard");
+      let total = _("leet-total");
+      let username = _("leet-username");
+      total.innerHTML = hasil.solvedProblem;
+      easy.innerHTML = hasil.easySolved;
+      medium.innerHTML = hasil.mediumSolved;
+      hard.innerHTML = hasil.hardSolved;
+    });
+  fetch("https://alfa-leetcode-api.onrender.com/LaurenceThriving")
+    .then((result) => result.json())
+    .then((hasil) => {
+      let username = _("leet-username");
+      let profile = _("leet-profile");
+      profile.src = hasil.avatar;
+      username.innerHTML = hasil.username;
+    });
+};
+
+leetcode();
